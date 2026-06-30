@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="After Sales - Produtos e acessórios Hyundai. Compre direto pelo WhatsApp.">
+<link rel="icon" href="img\Logo\Cópia de AF_Logo_Hyundai_Shop_RGB_1.jpg" type="image/png">
+<link rel="stylesheet" href="style.css">
+<title>After Sales</title>
+
+
+<!--Links Bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<style>
+
+    /* ── BOTÃO WHATSAPP ── */
+    .btn-card {
+        border: 2px solid #25D366 !important;
+        color: #25D366 !important;
+        background-color: #ffffff !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+    }
+    .btn-card:hover {
+        background-color: #25D366 !important;
+        color: #ffffff !important;
+    }
+
+    /* ── PREÇO ── */
+    .card-price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #002C5F;
+        margin: 4px 0 4px 0;
+    }
+
+    /* ── CARD ── */
+    .card {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #25D366 !important;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 320px;
+    }
+
+
+    .card-body {
+        flex: 1;
+        padding: 12px 15px 8px 15px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 0.5;
+        margin: 0 0 4px 0;
+    }
+
+    /* ── CONTAINER ── */
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 4px;
+        padding: 8px 10px;
+        border-top: 1px solid rgb(10, 18, 90);
+        border-bottom: 1px solid rgb(10, 18, 90);
+    }
+    .nav-options {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 4px;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-options .nav-item {
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    .nav-link {
+        color: black;
+        white-space: nowrap;
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+    .card-img-header {
+        max-width: 250px;
+        height: auto;
+    }
+    .card-img-nav {
+        max-width: 30px;
+        height: auto;
+    }
+    /* ── DIVISÓRIA DE SEÇÃO ── */
+    .section-divider {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 700px;
+        margin: 30px auto 10px;
+        text-align: center;
+    }
+    .section-divider::before,
+    .section-divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 2px solid #25D366;
+    }
+    .section-divider span {
+        padding: 0 16px;
+        font-size: 22px;
+        font-weight: 800;
+        color: #002C5F;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    /* ── FOOTER ── */
+    footer {
+        background-color: #002C5F;
+        color: white;
+        text-align: center;
+        padding: 24px 16px;
+        font-size: 14px;
+    }
+    footer a {
+        color: #25D366;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    /* ── IMAGEM ROTATIVA (fade suave) ── */
+    .card-img-rotate {
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+        .navbar { gap: 2px; padding: 6px 8px; }
+        .nav-options { gap: 2px; }
+        .nav-link { font-size: 10px; padding: 4px 5px; }
+        .card-img-nav { width: 24px; height: 24px; }
+    }
+    @media (max-width: 450px) {
+        .nav-link { font-size: 12px; padding: 3px 4px; }
+        .navbar { gap: 0px; }
+        .nav-options { gap: 0px; }
+    }
+
+</style>
+
+
+</head>
+<body>
+    <!--Heater and Nav Bar-->
+    <div style="position:sticky; top:0; z-index:1000; background:#fff;">
+        <header>
+            <img src="img/Logo/Logo Verde.png" class="card-img-header" style="height: 30px; object-fit:contain; width: 200px;" alt="After Sales">
+        </header>
+
+        <nav id="navbar" class="navbar px-3">
+            <img class="card-img-rotate card-img-nav"
+                data-images='["img/Ícones/Icon 1.png", "img/Ícones/Icon 2.png", "img/Ícones/Icon 3.png", "img/Ícones/Icon 4.png", "img/Ícones/Icon 5.png"]'
+                src="img/Ícones/Icon 1.png"
+                alt="Ícone After Sales">
+
+                <ol class="nav nav-options">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novidades.html">Novidades!</a></li>
+                    <li class="nav-item"><a class="nav-link" href="miniatura.html">Miniaturas</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="moda.html">Moda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lar.html">Lar Doce Lar</a></li>
+                </ol>
+
+            </nav>
+    </div>
+    
+
+    <!--CARDS-->
+    <div class="card-container" aria-label="Opçoes de Moda">
+
+        <!--DIVISÓRIA DE MATERIAL  -->
+        <div class="section-divider"><span>Malas</span></div>
+
+
+        <!-- CARD 1 Mala Preta -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Mala/HD_SHOP_MALA30.1.png", "img/Produtos/Dia a dia/Mala/HD_SHOP_MALA30.2.png"]'
+                 src="img/Produtos/Dia a dia/Mala/HD_SHOP_MALA30.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Mala Preta - HD Hyundai">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Mala Preta - HD Hyundai</h5>
+                <p class="card-price" >R$ 116,67</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 2 Mala Dobrável-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Mala/HD_SHOP_MALA31.1.png", "img/Produtos/Dia a dia/Mala/HD_SHOP_MALA31.2.png", "img/Produtos/Dia a dia/Mala/HD_SHOP_MALA31.3.png"]'
+                 src="img/Produtos/Dia a dia/Mala/HD_SHOP_MALA31.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Mala Dobrável - HD Hyundai">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Mala Dobrável - HD Hyundai</h5>
+                <p class="card-price" >R$ 73,22</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 3 Necessaire Azul-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Mala/HD_SHOP_MALA35.1.png", "img/Produtos/Dia a dia/Mala/HD_SHOP_MALA35.2.png", "img/Produtos/Dia a dia/Mala/HD_SHOP_MALA35.3.png"]'
+                 src="img/Produtos/Dia a dia/Mala/HD_SHOP_MALA35.2.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Necessaire Azul -  HD Hyundai">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Necessaire Azul -  HD Hyundai</h5>
+                <p class="card-price" >R$ 85,20</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 4 Sacochila -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Mala/HD_SHOP_SACOLA33.1.png", "img/Produtos/Dia a dia/Mala/HD_SHOP_SACOLA33.png"]'
+                 src="img/Produtos/Dia a dia/Mala/HD_SHOP_SACOLA33.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Sacochila">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Sacochila</h5>
+                <p class="card-price" >R$ 29,75</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 6 Necessaire HHIB  -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Mala/Necessaire_HHIB.1.png"]'
+                 src="img/Produtos/Dia a dia/Mala/Necessaire_HHIB.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Necessaire Preta - HD Hyundai">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Necessaire Preta - HD Hyundai</h5>
+                <p class="card-price" >R$ 85,20</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 8 Mala Dobrável -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Mala/Mala_Dobravel.1.png"]'
+                 src="img/Produtos/Dia a dia/Mala/Mala_Dobravel.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Mala Dobrável - HHIB">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Mala Dobrável - HHIB</h5>
+                <p class="card-price" >R$ 42,90</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 9 MOCHILA -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Mala/Mochila.1.png"]'
+                 src="img/Produtos/Dia a dia/Mala/Mochila.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Mochila">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Mochila</h5>
+                <p class="card-price" >R$ 95,86</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+
+
+
+
+        <!--DIVISÓRIA DE MATERIAL  -->
+        <div class="section-divider"><span>Copos & Garrafas</span></div>
+
+
+
+
+        <!-- CARD 1 Copo Térmico -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Garrafa/HD_SHOP_COPO1.png", "img/Produtos/Dia a dia/Garrafa/HD_SHOP_COPO2.png","img/Produtos/Dia a dia/Garrafa/HD_SHOP_COPO3.png"]'
+                 src="img/Produtos/Dia a dia/Garrafa/HD_SHOP_COPO1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Copo Térmico - 473ml">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Copo Térmico - 473ml</h5>
+                <p class="card-price" >R$ 94,44</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 2 Garrafa Inox - 650ml -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA1.1.png","img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA1.2.png"]'
+                 src="img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA1.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Garrafa Inox - 650ml">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Garrafa Inox - 650ml</h5>
+                <p class="card-price" >R$ 55,55</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 3 Garrafa Térmica de Inox - 500ml-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA2.1.png","img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA2.2.png"]'
+                 src="img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA2.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Garrafa Térmica de Inox - 500ml">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Garrafa Térmica de Inox 500ml</h5>
+                <p class="card-price" >R$ 77,78</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 4 Garrafa Inox Com Alça - 750ml-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA3.1.png","img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA3.2.png"]'
+                 src="img/Produtos/Dia a dia/Garrafa/HD_SHOP_GARRAFA3.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Garrafa Inox Com Alça - 750ml">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Garrafa Inox Com Alça - 750ml</h5>
+                <p class="card-price" >R$ 66,67</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+
+
+        <!--DIVISÓRIA DE MATERIAL  -->
+        <div class="section-divider"><span>Guarda Chuva</span></div>
+
+
+
+        <!-- CARD 1 Guarda chuva de bolsa -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_GUARDACHUVA25.png","img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_GUARDACHUVA26.png", 
+                 "img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_ESTOJO27.png","img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_ESTOJO28.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_GUARDACHUVA25.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Guarda Chuva de Bolsa">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Guarda Chuva de Bolsa</h5>
+                <p class="card-price" >R$ 93,33</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        
+        </div>
+        <!-- CARD 2 Guarda chuva  -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/Guarda_chuva.1.png","img/Produtos/Dia a dia/chuva chaveiro/Guarda_chuva.2.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/Guarda_chuva.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Guarda Chuva">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Guarda Chuva</h5>
+                <p class="card-price" >R$ 100,00</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 3 Capa de Chuva -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_BOLA29.1.png","img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_BOLA29.2.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_BOLA29.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Capa de Chuva">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Capa de Chuva</h5>
+                <p class="card-price" >R$ 16,55</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+
+
+        <!--DIVISÓRIA DE MATERIAL  -->
+        <div class="section-divider"><span>Chaveiros</span></div>
+
+
+
+
+        <!-- CARD 1 Porta Cartão -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_PORTA7.1.png","img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_PORTA7.2.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_PORTA7.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Porta Cartão">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Porta Cartão</h5>
+                <p class="card-price" >R$ 9,98</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 2 Chaveiro de Metal -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO4.1.png","img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO4.2.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO4.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Chaveiro de Metal">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Chaveiro de Metal</h5>
+                <p class="card-price" >R$ 27,67</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 3 Chaveiro Hyundai Sintético-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO5.1.png","img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO5.2.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO5.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Chaveiro Hyundai Sintético">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Chaveiro Hyundai Sintético</h5>
+                <p class="card-price" >R$ 38,89</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 4 Chaveiro e Abridor-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO6.1.png","img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO6.2.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/HD_SHOP_CHAVEIRO6.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Chaveiro e Abridor">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Chaveiro e Abridor</h5>
+                <p class="card-price" >R$ 5,56</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 5 Chaveiro Couro-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/chave.couro1.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/chave.couro1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Chaveiro - Réplica Couro">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Chaveiro - Réplica Couro</h5>
+                <p class="card-price" >R$ 127,15</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 6 Apoio de Celular-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/apoio_Cel.1.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/apoio_Cel.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Apoio de Celular">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Apoio de Celular</h5>
+                <p class="card-price" >R$ 25,22</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 7 Cubo Mágico-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Dia a dia/chuva chaveiro/Cubo_Magico.1.png"]'
+                 src="img/Produtos/Dia a dia/chuva chaveiro/Cubo_Magico.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Cubo Mágico">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Cubo Mágico</h5>
+                <p class="card-price" >R$ 23,49</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+    </div>
+
+    
+    <!--Direitos fim-->
+    <footer>
+        <p>© 2026 After Sales. Todos os direitos reservados.</p>
+        <p>Atendimento exclusivo via <a href="https://wa.me/message/B3TGPKSMDM6ZI1">WhatsApp</a></p>
+    </footer>
+
+
+    <!--+1 imagem no card, nav, etc, JAVAS-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const intervalTime = 3000;
+    const NUMERO = "552432210092"; // ← COLOQUE SEU NÚMERO AQUI
+
+    // Rotação de imagens
+    document.querySelectorAll(".card-img-rotate").forEach(function (img) {
+        const images = JSON.parse(img.getAttribute("data-images"));
+        let index = 0;
+        if (images.length > 1) {
+            setInterval(function () {
+                index = (index + 1) % images.length;
+                img.style.opacity = 0;
+                setTimeout(function () {
+                    img.src = images[index];
+                    img.style.opacity = 1;
+                }, 200);
+            }, intervalTime);
+        }
+    });
+
+    // Botão WhatsApp com mensagem do produto
+    document.querySelectorAll(".btn-whatsapp").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const card = btn.closest(".card");
+            const produto = card.querySelector(".card-title").innerText;
+            const preco = card.querySelector(".card-price").innerText;
+            const mensagem = encodeURIComponent(
+                "Olá! Tenho interesse no produto: " + produto + " (" + preco + "). Poderia me ajudar?"
+            );
+            window.open("https://wa.me/" + NUMERO + "?text=" + mensagem, "_blank");
+        });
+    });
+});
+</script>
+
+
+
+</body>
+</html>

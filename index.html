@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="After Sales - Produtos e acessórios Hyundai. Compre direto pelo WhatsApp.">
+<link rel="icon" href="img\Logo\Cópia de AF_Logo_Hyundai_Shop_RGB_1.jpg" type="image/png">
+<link rel="stylesheet" href="style.css">
+<title>After Sales | Produtos Hyundai</title>
+
+<!--Links Bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    /* ── HERO / VÍDEO ── */
+    .video-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .video-section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .video-overlay {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+        width: 90%;
+    }
+    .video-overlay h1 {
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 8px;
+    }
+    .video-overlay p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .video-overlay .btn-cta {
+        display: inline-block;
+        background-color: #25D366;
+        color: white;
+        font-weight: 700;
+        padding: 12px 28px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .video-overlay .btn-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* ── HEADER ── */
+    .card-img-header {
+        max-width: 250px;
+        height: auto;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4px;
+        padding: 8px 10px;
+        border-top: 1px solid rgb(10, 18, 90);
+        border-bottom: 1px solid rgb(10, 18, 90);
+    }
+    .nav-options {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 4px;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-options .nav-item {
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    .nav-link {
+        color: black;
+        white-space: nowrap;
+        font-size: 16px;
+        padding: 6px 8px;
+        transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+        color: #25D366;
+    }
+    .card-img-nav {
+        max-width: 30px;
+        height: auto;
+        transition: opacity 0.4s ease-in-out;
+    }
+    .card-img-rotate {
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+        background-color: #002C5F;
+        color: white;
+        text-align: center;
+        padding: 24px 16px;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+    footer a {
+        color: #25D366;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+   /* ── IMAGEM ROTATIVA (fade suave) ── */
+    .card-img-rotate {
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    /* ── RESPONSIVO ── */
+    @media (max-width: 600px) {
+        .navbar { gap: 2px; padding: 6px 8px; }
+        .nav-options { gap: 2px; }
+        .nav-link { font-size: 10px; padding: 4px 5px; }
+        .card-img-nav { width: 24px; height: 24px; }
+        .video-overlay h1 { font-size: 24px; }
+        .video-overlay p { font-size: 14px; }
+    }
+    @media (max-width: 450px) {
+        .nav-link { font-size: 12px; padding: 3px 4px; }
+        .navbar { gap: 0px; }
+        .nav-options { gap: 0px; }
+    }
+</style>
+
+</head>
+<body>
+    <!--Heater and Nav Bar-->
+    <div style="position:sticky; top:0; z-index:1000; background:#fff;">
+        <header>
+            <img src="img/Logo/Logo Verde.png" class="card-img-header" style="height: 30px; object-fit:contain; width: 200px;" alt="After Sales">
+        </header>
+
+        <nav id="navbar" class="navbar px-3">
+            <img class="card-img-rotate card-img-nav"
+                data-images='["img/Ícones/Icon 1.png", "img/Ícones/Icon 2.png", "img/Ícones/Icon 3.png", "img/Ícones/Icon 4.png", "img/Ícones/Icon 5.png"]'
+                src="img/Ícones/Icon 1.png"
+                alt="Ícone After Sales">
+
+            <ol class="nav nav-options">
+                <li class="nav-item"><a class="nav-link" href="novidades.html">Novidades!</a></li>
+                <li class="nav-item"><a class="nav-link" href="miniatura.html">Miniaturas</a></li>
+                <li class="nav-item"><a class="nav-link" href="moda.html">Moda</a></li>
+                <li class="nav-item"><a class="nav-link" href="lar.html">Lar Doce Lar</a></li>
+                <li class="nav-item"><a class="nav-link" href="dia.html">Dia a Dia</a></li>
+            </ol>
+        </nav>
+    </div>    
+
+    <section class="video-section">
+        <video autoplay muted loop playsinline>
+            <source src="img/Vídeos/AG1002-2449 POST 12 - Reels.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay">
+            <a href="https://wa.me/message/B3TGPKSMDM6ZI1" class="btn-cta">Comprar pelo WhatsApp</a>
+        </div>
+    </section>
+
+
+
+    <!--Direitos fim-->  
+    <footer>
+        <p>© 2026 After Sales. Todos os direitos reservados.</p>
+        <p>Atendimento exclusivo via <a href="https://wa.me/message/B3TGPKSMDM6ZI1">WhatsApp</a></p>
+    </footer>
+
+    <!--+1 imagem no card, nav, etc-->    
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const intervalTime = 3000;
+    const NUMERO = "552432210092"; // ← COLOQUE SEU NÚMERO AQUI
+
+    // Rotação de imagens
+    document.querySelectorAll(".card-img-rotate").forEach(function (img) {
+        const images = JSON.parse(img.getAttribute("data-images"));
+        let index = 0;
+        if (images.length > 1) {
+            setInterval(function () {
+                index = (index + 1) % images.length;
+                img.style.opacity = 0;
+                setTimeout(function () {
+                    img.src = images[index];
+                    img.style.opacity = 1;
+                }, 200);
+            }, intervalTime);
+        }
+    });
+
+    // Botão WhatsApp com mensagem do produto
+    document.querySelectorAll(".btn-whatsapp").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const card = btn.closest(".card");
+            const produto = card.querySelector(".card-title").innerText;
+            const preco = card.querySelector(".card-price").innerText;
+            const mensagem = encodeURIComponent(
+                "Olá! Tenho interesse no produto: " + produto + " (" + preco + "). Poderia me ajudar?"
+            );
+            window.open("https://wa.me/" + NUMERO + "?text=" + mensagem, "_blank");
+        });
+    });
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>

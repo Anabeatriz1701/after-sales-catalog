@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="After Sales - Produtos e acessórios Hyundai. Compre direto pelo WhatsApp.">
+<link rel="icon" href="img\Logo\Cópia de AF_Logo_Hyundai_Shop_RGB_1.jpg" type="image/png">
+<link rel="stylesheet" href="style.css">
+<title>After Sales</title>
+
+
+<!--Links Bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<style>
+
+    /* ── BOTÃO WHATSAPP ── */
+    .btn-card {
+        border: 2px solid #25D366 !important;
+        color: #25D366 !important;
+        background-color: #ffffff !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+    }
+    .btn-card:hover {
+        background-color: #25D366 !important;
+        color: #ffffff !important;
+    }
+
+    /* ── PREÇO ── */
+    .card-price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #002C5F;
+        margin: 4px 0 4px 0;
+    }
+
+    /* ── CARD ── */
+    .card {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #25D366 !important;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 320px;
+    }
+
+
+    .card-body {
+        flex: 1;
+        padding: 12px 15px 8px 15px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 0.5;
+        margin: 0 0 4px 0;
+    }
+
+    /* ── CONTAINER ── */
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 4px;
+        padding: 8px 10px;
+        border-top: 1px solid rgb(10, 18, 90);
+        border-bottom: 1px solid rgb(10, 18, 90);
+    }
+    .nav-options {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 4px;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-options .nav-item {
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    .nav-link {
+        color: black;
+        white-space: nowrap;
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+    .card-img-header {
+        max-width: 250px;
+        height: auto;
+    }
+    .card-img-nav {
+        max-width: 30px;
+        height: auto;
+    }
+    /* ── DIVISÓRIA DE SEÇÃO ── */
+    .section-divider {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 700px;
+        margin: 30px auto 10px;
+        text-align: center;
+    }
+    .section-divider::before,
+    .section-divider::after {
+        content: "";
+        flex: 1;
+        border-bottom: 2px solid #25D366;
+    }
+    .section-divider span {
+        padding: 0 16px;
+        font-size: 22px;
+        font-weight: 800;
+        color: #002C5F;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    /* ── FOOTER ── */
+    footer {
+        background-color: #002C5F;
+        color: white;
+        text-align: center;
+        padding: 24px 16px;
+        font-size: 14px;
+    }
+    footer a {
+        color: #25D366;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    /* ── IMAGEM ROTATIVA (fade suave) ── */
+    .card-img-rotate {
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+        .navbar { gap: 2px; padding: 6px 8px; }
+        .nav-options { gap: 2px; }
+        .nav-link { font-size: 10px; padding: 4px 5px; }
+        .card-img-nav { width: 24px; height: 24px; }
+    }
+    @media (max-width: 450px) {
+        .nav-link { font-size: 12px; padding: 3px 4px; }
+        .navbar { gap: 0px; }
+        .nav-options { gap: 0px; }
+    }
+
+</style>
+
+</head>
+<body>
+    <!--Heater and Nav Bar-->
+    <div style="position:sticky; top:0; z-index:1000; background:#fff;">
+        <header>
+            <img src="img/Logo/Logo Verde.png" class="card-img-header" style="height: 30px; object-fit:contain; width: 200px;" alt="After Sales">
+        </header>
+
+        <nav id="navbar" class="navbar px-3">
+            <img class="card-img-rotate card-img-nav"
+                data-images='["img/Ícones/Icon 1.png", "img/Ícones/Icon 2.png", "img/Ícones/Icon 3.png", "img/Ícones/Icon 4.png", "img/Ícones/Icon 5.png"]'
+                src="img/Ícones/Icon 1.png"
+                alt="Ícone After Sales">
+
+            <ol class="nav nav-options">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="novidades.html">Novidades!</a></li>
+                <li class="nav-item"><a class="nav-link" href="miniatura.html">Miniaturas</a></li>
+                <li class="nav-item"><a class="nav-link" href="moda.html">Moda</a></li>
+                <li class="nav-item"><a class="nav-link" href="dia.html">Dia a Dia</a></li>
+            </ol>
+        </nav>
+
+    </div>        
+
+
+    <!--CARDS-->
+    <div class="card-container" aria-label="Opçoes de Lar">
+
+        <!-- CARD 1 Porta copo e Abridor-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Lar/HD_SHOP_ABRIDOR8.1.png", "img/Produtos/Lar/HD_SHOP_ABRIDOR8.2.png", "img/Produtos/Lar/HD_SHOP_ABRIDOR9.1.png"]'
+                 src="img/Produtos/Lar/HD_SHOP_ABRIDOR8.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Porta copo e Abridor">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Porta copo e Abridor</h5>
+                <p class="card-price" >R$ 10,00</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 2 Kit Churrasco-->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Lar/HD_SHOP_TABUA 36.png"]'
+                 src="img/Produtos/Lar/HD_SHOP_TABUA 36.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Kit Churrasco">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Kit Churrasco</h5>
+                <p class="card-price" >R$ 90,00</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+        <!-- CARD 3 Bowl para Petisco -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Lar/HD_SHOP_TABUA32.1.png","img/Produtos/Lar/HD_SHOP_TABUA32.2.png"]'
+                 src="img/Produtos/Lar/HD_SHOP_TABUA32.1.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Bowl para Petisco">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Bowl para Petisco</h5>
+                <p class="card-price" >R$ 80,75</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+        <!-- CARD 4 Kit Petisco -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Lar/Kit Petisco.png"]'
+                 src="img/Produtos/Lar/Kit Petisco.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Kit Petisco">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Kit Petisco</h5>
+                <p class="card-price" >R$ 311,78</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+        <!-- CARD 5 Kit Churrasco e Jogo -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Lar/Kit churrasco jogo.png"]'
+                 src="img/Produtos/Lar/Kit churrasco jogo.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Kit Churrasco e Jogo">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Kit Churrasco e Jogo</h5>
+                <p class="card-price" >R$ 346,44</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+        <!-- CARD 6 Tábua de Queijos -->
+        <div class="card" style="max-width: 340px; width: 100%; padding: 0%;">
+            <img class="card-img-rotate"
+                 data-images='["img/Produtos/Lar/Tabua de queijos.png"]'
+                 src="img/Produtos/Lar/Tabua de queijos.png"
+                 style="width:120px; height:120px; object-fit:contain; margin:25px auto; display:block;" alt="Tábua de Queijos">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 20px; font-weight: 700;" >Tábua de Queijos</h5>
+                <p class="card-price" >R$ 84,90</p>
+            </div>
+            <button class="btn btn-card btn-whatsapp" style="display:block; width:100%; height:80px; text-align:center; padding-top:17px; border-radius:0 0 6px 6px; background-color:#25D366 !important; color:white !important; border:none !important; cursor:pointer;">
+                Compre pelo Whatsapp - After Sales
+            </button>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <!--Direitos fim-->
+    <footer>
+        <p>© 2026 After Sales. Todos os direitos reservados.</p>
+        <p>Atendimento exclusivo via <a href="https://wa.me/message/B3TGPKSMDM6ZI1">WhatsApp</a></p>
+    </footer>
+
+    <!--+1 imagem no card, nav, etc, JAVAS-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const intervalTime = 3000;
+    const NUMERO = "552432210092"; // ← COLOQUE SEU NÚMERO AQUI
+
+    // Rotação de imagens
+    document.querySelectorAll(".card-img-rotate").forEach(function (img) {
+        const images = JSON.parse(img.getAttribute("data-images"));
+        let index = 0;
+        if (images.length > 1) {
+            setInterval(function () {
+                index = (index + 1) % images.length;
+                img.style.opacity = 0;
+                setTimeout(function () {
+                    img.src = images[index];
+                    img.style.opacity = 1;
+                }, 200);
+            }, intervalTime);
+        }
+    });
+
+    // Botão WhatsApp com mensagem do produto
+    document.querySelectorAll(".btn-whatsapp").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const card = btn.closest(".card");
+            const produto = card.querySelector(".card-title").innerText;
+            const preco = card.querySelector(".card-price").innerText;
+            const mensagem = encodeURIComponent(
+                "Olá! Tenho interesse no produto: " + produto + " (" + preco + "). Poderia me ajudar?"
+            );
+            window.open("https://wa.me/" + NUMERO + "?text=" + mensagem, "_blank");
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>
